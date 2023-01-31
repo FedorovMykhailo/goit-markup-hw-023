@@ -40,8 +40,7 @@ img {
   height: auto;
 }
 .container {
-  max-width: 1158px;
-  /* width: 1158px; */
+  width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -118,14 +117,12 @@ img {
 /* header style*/
 .header {
   border-bottom: 1px solid #e7e9fc;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  margin-right: 332px;
+  margin-right: auto;
 }
 
 .nav-container {
@@ -180,9 +177,7 @@ img {
 }
 
 .section {
-  padding: 120px 156px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 120px 0;
 }
 
 /* main style */
@@ -193,8 +188,6 @@ img {
 }
 
 .hero-container {
-  margin-left: auto;
-  margin-right: auto;
 }
 .hero-title {
   width: 494px;
@@ -216,7 +209,8 @@ img {
   border-radius: 4px;
 }
 .features-container {
-  /* padding: 120px 156px; */
+  --items: 4;
+  --row-indent: 24px;
 }
 
 .section-features {
@@ -235,7 +229,7 @@ img {
 }
 
 .features-item {
-  width: 264px;
+  flex-basis: calc((100% - var(--row-indent) * 3) / var(--items));
 }
 
 .features-subtitle {
@@ -249,7 +243,6 @@ img {
 }
 
 .container-we-are {
-  /* padding: 120px 156px; */
 }
 .we-are-title {
   text-transform: capitalize;
@@ -268,10 +261,11 @@ img {
 }
 
 .section-team {
+  --items: 4;
+  --row-indent: 24px;
   background-color: var(--light-theme-color);
 }
 .team-container {
-  /* padding: 120px 156px; */
 }
 .team-title {
   text-transform: capitalize;
@@ -286,8 +280,14 @@ img {
   margin-right: 24px;
 }
 
+.team-item {
+  flex-basis: calc((100% - var(--row-indent) * 3) / var(--items));
+  background: var(--hero-txt-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
 .team-image {
-  margin-bottom: 32px;
 }
 
 .team-subtitle {
@@ -297,8 +297,11 @@ img {
 
 .team-desc {
   text-align: center;
-  margin-bottom: 32px;
 }
+.card-container {
+  padding: 32px 0;
+}
+
 /* Projects-style */
 .section-projects {
   padding-top: 96px;
@@ -328,7 +331,7 @@ img {
   gap: var(--column-indent) var(--row-indent);
 }
 .project-item {
-  width: calc((100% - var(--row-indent) * 2) / var(--items)-30px);
+  flex-basis: calc((100% - var(--row-indent) * 2) / var(--items)-30px);
 }
 
 .project-subtitle {
@@ -347,7 +350,7 @@ img {
   background-color: var(--dark-theme-color);
 }
 .footer-container {
-  padding: 100px 156px;
+  padding: 100px 15px;
 }
 .footer-nav-logo,
 .footer-nav-logo:hover,
