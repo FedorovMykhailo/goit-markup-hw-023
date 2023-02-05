@@ -350,7 +350,8 @@ img {
   background-color: var(--dark-theme-color);
 }
 .footer-container {
-  padding: 100px 15px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer-nav-logo,
 .footer-nav-logo:hover,
